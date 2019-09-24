@@ -96,6 +96,7 @@ defmodule VGenServer do
   def find_fangs(n, half, sorted, fangs, first, last) when first<last do
     if(rem(n, first) == 0 &&
       digit_count(first) == half && digit_count(div(n,first)) == half  &&
+      (rem(first, 10) == 0 && rem(div(n,first), 10) == 0) != true &&
       Enum.sort(String.codepoints("#{first}#{div(n,first)}")) == sorted) do
         find_fangs(n,half,sorted,fangs <> " #{first} #{div(n,first)}", first+1, last)
     else
