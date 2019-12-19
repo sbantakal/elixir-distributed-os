@@ -1,0 +1,43 @@
+Steps to run the project:
+-------------------------
+Step 1: Build the dependecies:
+        run mix deps.get
+
+Step 2: Compile the project:
+        run mix escript.build 
+
+Step 3: To start the server,
+        ./twitter server
+
+Step 4: In a new window, here you have two options: 
+        •	To run as interactive client 
+        •	To run as simulator.
+
+
+        as interactive client:
+          ./twitter client 127.0.0.1 username
+
+        eg: ./twitter client 127.0.0.1 sbantakal
+            ./twitter client 127.0.0.1 santhosh
+
+
+        as simulator:
+          mix run proj4_1.exs a b
+            -	a is the number of users to be registered.
+            -	b is the number of tweet that each user has to make.
+
+Steps to run the Test cases:
+------------------------------
+Step 1: run mix deps.get
+
+Step 2: run mix escript.build , if you don’t do the step one first, then it might throw an error and then you will have to run & then do mix escript.build again.
+
+
+Step 3: To start the server,
+        ./twitter server
+
+Step 4: In a new window run the below command
+	 mix test --only tc:a
+	
+-	a is the test case number
+-	sample run is as below
