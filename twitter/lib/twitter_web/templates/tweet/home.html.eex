@@ -1,0 +1,122 @@
+<script>window.UserName = "<%= @user %>"</script>
+<div class="page">
+    <h3 class="modal-title text-left bold">Welcome <%= @user %>! </h3>  
+    <br>
+    <button type="submit" class="btn btn-primary" id="dashboard">Dash Board</button>
+    <button type="button" class="btn btn-default" id="followers">Following</button>
+    <button type="button" class="btn btn-default" id="about">About</button>
+    <br> <br>
+    <div class="dashboard">
+        <div class="msg-container">
+            <textarea id="msg-input" rows="3" cols="60" placeholder="Tweet something ..."></textarea>
+            <br>
+            <a href="#" class="btn btn-secondary btn-sm" id = "msg-submit">  
+                <span class="glyphicon glyphicon-send"></span>
+                Tweet
+            </a> 
+        </div>
+        <br> <br>
+        <div class="form-group has-search">
+            <div class="input-group">
+                <input class="form-control" placeholder="Search for Tweets" id="srchbox" type="text">
+                <div class="input-group-btn pull-center">
+                    <button class="btn btn-default" type="submit" id="search"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll">
+            <h3 id="title"> </h3>
+            <div class="card" style="width: 50rem;" id="tweets">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="followers">
+        <div class="row">
+            <div class="col-sm scroll" >
+                <h4> Following </h4>
+                <ul class="list-group" id="fol_list">
+                </ul>
+            </div>
+            <div class="col-sm" class="scroll">
+                <h4> Add to Follow ?</h4>
+                <ul class="list-group" id="restuser_list">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <ul class="list-group" id="details">
+        </ul>
+    </div>
+
+</div>
+<script>
+window.UserName = "<%= @user %>"
+</script>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('https://www.targetgroup.co.uk/wp-content/uploads/2016/09/TA-when-twitter-turns-on-you.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.page{
+    background-color:white;
+    padding: 15px;
+    width: 80vw;
+    left: 50%;
+    right: 50%;
+    position: relative;
+    margin-left: -40vw;
+    margin-top:3vw;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+h3 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: green;
+    color:white;
+}
+.scroll {
+  height:400px;
+  overflow-y: auto;
+}
+
+</style>
